@@ -1,0 +1,22 @@
+/*#box{
+    background-color: pink;
+    width: 30%;
+    height: 250px;
+    padding: 10px;
+}
+
+div{
+    background-color: aqua;
+    height: 200px;
+    width: 200px;
+}*/
+
+.content{
+    background-color: purple;
+    color: white;
+    height: 50px;
+}
+
+.newContent{
+    background-color: red;
+}
