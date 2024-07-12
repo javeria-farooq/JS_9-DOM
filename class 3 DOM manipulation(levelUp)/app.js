@@ -1,141 +1,117 @@
-/*////////getAttribute(attributeName) */
+/*//getAttribute()
+let box = document.querySelector(".box").getAttribute("class")
+console.log(`class : ${box}`)
 
-/*let div = document.querySelector("#box")
-console.log(div.getAttribute("id"))*/
+let box2 = document.querySelector(".box")
+console.log(`id : ${box2.getAttribute("id")}`)
 
-/*let div = document.querySelector("div")
-let id = div.getAttribute("id")
-console.log(id)*/
+let box3 = document.querySelector(".box")
+let boxRes = box3.getAttribute("name")
+console.log(`name : ${boxRes}`)
 
-/*let paragraph = document.querySelector(".para")
-console.log(paragraph.getAttribute("class")) */
+//setAttribute()
+console.log('"Set Attribute"')
+let boxSetting = document.querySelector(".box").setAttribute("class", "box box_setting") // can set multiple attributes
+console.log(`class : ${boxSetting}`)
 
-/*let paragraph = document.querySelector("p")
-let class1 = paragraph.getAttribute("class")
-console.log(class1)*/
+let boxSetting2 = document.querySelector(".box")
+console.log(`id : ${boxSetting2.setAttribute("id", "divSetting")}`)
 
-/*let div = document.querySelector("div")
-let name1 = div.getAttribute("name")
-console.log(name1)*/
+let boxSetting3 = document.querySelector(".box")
+let boxSettingRes = boxSetting3.setAttribute("name", "aliza")
+console.log(`name : ${boxSettingRes}`)*/
 
-/*////////setAttribute(attributeName, setNewValue) */
-/*let para = document.querySelector("p")
-let paraNewClass = para.setAttribute("class", "paragraph")
-console.log(paraNewClass) // lkn jb is cheez ko console krwte hn t wo undefine btata h but element m jaake change
-// krdta h*/
+/*//classList(add, remove)
+let box = document.querySelector(".box")
+console.log(box)
+box.classList.add("helloBox", 'jav') // can set multiple classes
+box.classList.remove('helloBox', 'jav') // can remove muliple classes*/
 
-/*/////////changing style attribute value through node.style*/
+/*// node.style
+let box = document.querySelector(".box")
+console.log('"box styling"')
+console.log(box)
+box.style.height = '200px'
+box.style.width = '200px'
+box.style.backgroundColor = 'aqua'
+box.style.border = '2px solid black'
+// box.style.transform = 'rotate(90deg)'
+// box.style.transform += 'translateY(100%)'
+// box.style.transform += 'scale(3)'
+box.style.transform = 'rotate(90deg) translateY(100%) scale(3)'*/
 
-/*let para = document.querySelector("p")
-console.log(para.style)
-para.style.backgroundColor = "pink"*/
+/*//createElement:
+let h1 = document.createElement('h1')
+h1.innerText = "This is DOM's heading"
+let p = document.createElement("p")
+p.innerHTML = '<i> this is DOM paragraph </i>'
+console.log(h1)
+console.log(p)
+let btn = document.createElement('button')
+btn.innerText = "Click"
+console.log(btn)
 
-/*let div = document.querySelector("div")
-console.log(div.style)
-div.style.backgroundColor = "aquaMarine"
-div.style.padding = "20px"*/
+//insertElement
+let container = document.querySelector(".container")
+//append
+// container.append(h1)
+// container.append(p)
+// container.append(btn)
 
-/*/////////Insert Elements: */
-/*first we create elements for inserting it on document */
+//prepend:
+// container.prepend(h1)
+// container.prepend(p)
+// container.prepend(btn)
 
-/*let newBtn = document.createElement("button")
-console.log(newBtn)
-console.log(newBtn.innerText)
-newBtn.innerText = "Click me!"
-console.log(newBtn)
-console.log(newBtn.innerText)*/
+//before:
+// container.before(h1)
+// container.before(p)
+// container.before(btn)
 
-/*let newDiv = document.createElement("div")
-console.log(newDiv)
-console.log(newDiv.innerText)*/
+//after:
+container.after(h1)
+container.after(p)
+container.after(btn)*/
 
-/*let newDiv2 = document.createElement("div")
-console.log(newDiv2)
-newDiv2.innerText = "New div"
-console.log(newDiv2.innerText)*/
+/*//remove:
+let htmlHead = document.querySelector(".htmlHead")
+htmlHead.remove()
+p.remove()*/
 
-/*//// Now we insert ele on document */
+//two more method but this is older one. 'appendChild' and 'removeChild
 
-//create ele:
-/*let redBtn = document.createElement("button")
-let whiteBtn = document.createElement("button")
-//insert text into a new el
-whiteBtn.innerText = "Click me!"
-redBtn.innerHTML = "<b><i>view more projects</i></b>"
-//access specific el
-let div = document.querySelector("#box")
-// CSS of newBtn
-redBtn.style.height = "30px"
-redBtn.style.width = "150px"
-redBtn.style.backgroundColor = "red"
-redBtn.style.color = "white"
-//insert new el:
+let container = document.querySelector(".container")
 
-// div.append(whiteBtn)
-// div.append(redBtn)
-div.prepend(whiteBtn)
-div.prepend(redBtn)
+let headingTag = document.createElement("h1")
+let headingText = document.createTextNode('Heading of DOM')
 
-let mainHeading = document.createElement("h1")
-mainHeading.innerHTML = "<i>This is h1 Heading</i>"
+let paragraphTag = document.createElement("p")
+let paragraphText = document.createTextNode("Paragraph of DOM")
 
-let subHeading = document.createElement("h3")
-subHeading.innerHTML = "<i>This is h3 Heading</i>"
+let btnTag = document.createElement("button")
+let btnText = document.createTextNode("Click for JS tutorial")
 
-let body = document.querySelector("body")
-let div2 = document.querySelector("#box2")
+headingTag.appendChild(headingText)
+paragraphTag.appendChild(paragraphText)
+btnTag.appendChild(btnText)
+console.log(headingTag)
+console.log(paragraphTag)
+console.log(btnTag)
 
-body.prepend(mainHeading)
-// body.append(mainHeading)
-div2.after(subHeading)
-// div2.before(subHeading)
+// container.append(headingTag)
+// container.append(paragraphTag)
+// container.append(btnTag)
 
-// redBtn.remove()
-// whiteBtn.remove()
-// mainHeading.remove()
-// subHeading.remove()
-div2.remove()
+// container.prepend(headingTag)
+// container.prepend(paragraphTag)
+// container.prepend(btnTag)
 
-let para = document.querySelector("p")
-para.remove()
+// container.before(headingTag)
+// container.before(paragraphTag)
+// container.before(btnTag)
 
-let btn = document.querySelector("button")
-btn.remove()*/
-
-/*////// appendChild method */
-
-/* let newElement = document.createElement("h1")
-let newText = document.createTextNode("this is my content")
-
-console.log(newElement)
-console.log(newText)
-
-newElement.appendChild(newText)
-console.log(newElement)
-
-let body = document.querySelector("body")
-body.append(newElement)
-// newText.appendChild(newElement)  // error
-// console.log(newText) */
-
-/**///////remove child: */
-/*let uList = document.querySelector("ul")
-let dltList = uList.children[0]
-uList.removeChild(dltList)
-// uList.removeChild(uList.children[2])*/
-
-/*//////////Practice questions: */
-
-// qno:1
-let btn = document.createElement("button")
-btn.innerText = "Click me!"
-btn.style.backgroundColor = "red"
-btn.style.color = "white"
-let body = document.querySelector("body")
-body.prepend(btn)
-
-//qno:2
-
-let para = document.querySelector("p")
-para.classList.add("newContent")
-para.classList.remove("content")
+container.after(headingTag)
+container.after(paragraphTag)
+container.after(btnTag)
+//removeChild
+btnTag.removeChild(btnText)

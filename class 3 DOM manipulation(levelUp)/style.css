@@ -1,22 +1,28 @@
-/*#box{
-    background-color: pink;
-    width: 30%;
-    height: 250px;
-    padding: 10px;
-}
-
-div{
-    background-color: aqua;
+/* get and set attribute */
+/* .box, .box-setting{
     height: 200px;
     width: 200px;
-}*/
+    border: 2px solid black;
+    margin: 0px auto;
+    background-color: aqua;
+} */
 
-.content{
-    background-color: purple;
-    color: white;
-    height: 50px;
+/* classList property: */
+
+/* .box{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    margin: 0px auto;
+    background-color: aqua;
 }
 
-.newContent{
-    background-color: red;
+.helloBox{
+    background-color: pink;
+} */
+
+/* insert elements */
+.container{
+    background-color: aqua;
+    height: 300px;
 }

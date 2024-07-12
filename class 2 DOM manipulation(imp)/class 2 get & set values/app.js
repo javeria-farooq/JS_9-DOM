@@ -1,104 +1,49 @@
-/*////////////////1st property: tagName */
+/*// get values:
+// tagName:
+let myHeading = document.querySelector(".heading")
+console.log(myHeading) // jb hm srf itna lkhnge t ye tag with content print krwaega lkn agr hm chahen k hmare ps srf uska tagName get ho.
+let myPara = document.querySelector(".para").tagName
+console.log(myParaara) // ab ye hmn srf uska tag name return krega but in uppercase.
 
-// let btn = document.querySelector("button")
-// console.log(btn.tagName)
+// innerText: jb hm chahen k hmn tagName return na ho blke srf uska text return ho
+let div = document.querySelector(".div").innerText
+console.log(div) // ab ismn iske jtne bh childrens hnge sbka text aaega.
 
-// let heading = document.querySelectorAll(".head")
-// console.log(heading.tagName)
+//innerHTML: jb hmn pura html with text chahiye ho
+let container = document.querySelector(".container").innerHTML
+console.log(container) // ismn bh parent with child sbka inner html aaega
 
-/*///////////////2nd property: innerText */
+//textContent: jb hmn text t chahiye ho lkn jo hide(display none, visisbility hidden) h wo bh chahiye
+let hide = document.querySelector(".hideEleContainer").textContent
+console.log(hide)
 
-/*it doesn't work: */  // ek r bt jb hm srf + lgaenge tb bh ye work nh krega. yni mjhe + k sth = bh lgana hga ya t srf = lgana hga lkn akele + m ye work nh krega
-// let para = document.querySelector("#headTypePara").innerText
-// let paraRes = para + " world"
-// console.log(paraRes)
+// yhn tk hmne values ko get krlia ab bt aati h values ko set krne ki t ye bt yd rh k jb bh hmn values set krni hti hn t hm in 4ron properties ko variable declare krte time variable m nh rkhte blke declare krte time srf el ko access krte hn then phr next step m ya t oosi variable m property assign krte hn ya phr without variable bh .se property ko set krte hn t ye hjta h but variable declare krte time srf el ko access krte hn..
 
-// let newPara2 = document.querySelector("#headTypePara").innerText
-// newPara2 + " javeria"
+// set values:
+let heading1 = document.querySelector(".heading").innerText
+heading1 = heading1 += "javeria" // at the time of declaring a variable innerText set that's why it's not work
 
-// let myPara2 = document.querySelector("#headTypePara").innerText
-// myPara2 = myPara2 += " javeria"
-// console.log(myPara2)
+let heading2 = document.querySelector(".heading")
+heading2.innerText += " by apna college"
 
-// let myPara = document.querySelector("#headTypePara")
-// myPara = myPara.innerText + " world" 
-// console.log(myPara)
+let para = document.querySelector(".para")
+para.innerText += " ! hello paragraph"*/
 
-// let para2 = document.querySelector("#headTypePara")
-// let paraRes2 = para2.innerText + " javeria"
-// console.log(paraRes2)
+// whatsapp readmore button
+let a = document.querySelector(".readMore")
+let hidePara = document.querySelector(".hidePara")
 
-/*it works: */
+a.addEventListener("click", () => {
+    a.style.display = 'none'
+    hidePara.innerText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolorum asperiores sapiente nemo reiciendis in, quos tempora magnam nulla optio nostrum, iure velit suscipit, perspiciatis vel aliquam ut pariatur voluptatem libero officiis. Et necessitatibus vero, iure recusandae quaerat debitis adipisci, eius esse optio quae voluptate eveniet explicabo sit atque! Tempora!`
+})
 
-// let para = document.querySelector("#headTypePara").innerText = document.querySelector("#headTypePara").innerText + "with apna college students"
-// console.log(para)
-
-// let myPara = document.querySelector("#headTypePara")
-// myPara = myPara.innerText += " world"
-// console.log(myPara)
-
-// let myPara2 = document.querySelector("#headTypePara")
-// myPara2 = myPara2.innerText = " world"
-// console.log(myPara2)
-
-// let para = document.querySelector("#headTypePara")
-// let paraRes = para.innerText += " of tech"
-// console.log(paraRes)
-
-// let para3 = document.querySelector("#headTypePara")
-// let paraRes3 = para3.innerText = " javeria farooq"
-// console.log(paraRes3)
-
-// let javPara = document.querySelector("#headTypePara")
-// javPara.innerText += " world"
-// console.log(javPara)
-
-/***** whatsapp readmore button */
-
-// let extraMsg = document.querySelector("#secPara")
-// extraMsg.style.visibility = "hidden"
-
-// function readmore() {
-//     let abc = document.querySelector("a")
-//     abc.innerText = extraMsg.style.visibility = "visible"
-//     abc.style.color = "black"
-//     abc.style.textDecoration = "none"
-
-// }
-
-
-
-/*//////////////////3rd property: innerHTML */
-
-// let div = document.querySelector("div")
-// console.log(div.innerHTML)
-// console.log(div.innerHTML = "<div> inner div </div>")
-
-// let myText = document.querySelector("#jav")
-// console.log(myText.innerHTML = "<i> javeria farooq </i>")
-
-// let heading = document.querySelector("h1")
-// heading.innerHTML = "<i> new heading </i>"
-// console.log(heading.innerText = "new heading")
-
-
-/*////////////////4th n last property: textContent */
-
-// let mainHeading = document.querySelector("h1")
-// mainHeading.style.visibility = "hidden"
-
-// console.log(mainHeading.innerText)
-// console.log(mainHeading.textContent)
-// console.log(mainHeading.innerHTML)
-
-
-
-/*////////////////////////////// practice questions: */
+// practice questions:
 //qno: 1
-let heading = document.querySelector("h2")
+let heading = document.querySelector(".pracHeading")
 heading.innerText += " from apna college students"
-
-let divs = document.querySelectorAll(".box")
+// qno:2
+let divs = document.querySelectorAll(".pracBox")
 // divs[0].innerText = " new unique value 1"
 // divs[1].innerText = " new unique value 2"
 // divs[2].innerText = " new unique value 3"

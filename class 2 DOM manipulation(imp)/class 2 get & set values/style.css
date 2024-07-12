@@ -1,4 +1,15 @@
-div{
+/* textContent property */
+/* .hideEleContainer{
+    background-color: pink;
+}
+
+.hideEleContainer p{
+    display: none;
+    visibility: hidden;
+} */
+
+/* practice ques */
+.pracBox{
     background-color: aquamarine;
     height: 100px;
     width: 100px;
